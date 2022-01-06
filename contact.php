@@ -20,7 +20,8 @@ if(isset($_POST['Submit']))
     $headers = "From:".$email;
     $txt = "You have received a message from ".$name.".\n\n".$message;
  
-    $mail = new PHPMailer();
+    echo($message);
+    $mail = new PHPMailer(true);
     $mail->isSMTP();
     $mail->Mailer = "smtp";
     $mail->Host = 'smtp.gmail.com';
@@ -28,7 +29,7 @@ if(isset($_POST['Submit']))
     $mail->Username = 'nimstayp@gmail.com';   // SMTP username 
     $mail->Password = 'nimstaypHOST22!';   // SMTP password 
     $mail->SMTPSecure = 'tls';            // Enable TLS encryption, `ssl` also accepted 
-    $mail->Port = 587;
+    $mail->Port = '587';
 
     $mail->setFrom("nimstayp@gmail.com", "NimsTay Photos");
     $mail->addAddress($mailto);
