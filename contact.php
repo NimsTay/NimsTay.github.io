@@ -25,7 +25,7 @@
         <div class="contact_boxes">
             <form class="contact_form" method="post" action="contact.php">
                 <?php include ("contact.php"); ?> 
-                <input id="Name" type="text" class="form_entry" placeholder="Your Name" required>
+                <input id="Name" type="text" class="form_entry" placeholder="Your Names" required>
                 <br> <!-- line break -->
                 <input name="Email" type="email" class="form_entry" placeholder="youremail@domain.com" required>
                 <br>
