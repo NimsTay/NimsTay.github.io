@@ -1,0 +1,671 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "KoHo", sans-serif;
+}
+
+body {
+  background-color: gray;
+}
+
+.navbar {
+  background-image: url("images/flare-gradient.jpg");
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999; /*so no matter where you are on site it will always be on top */
+}
+
+.nav_container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.nav_txt {
+  position: absolute;
+  background-image: linear-gradient(to top, #0f0f0f 0%, #ffffff 100%);
+  background-size: 100%;
+  -webkit-background-clip:text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: inline;
+  align-items: center;
+  cursor: pointer; /*makes hand symbol when hover */
+  text-decoration: none;
+  font-size: 1.7rem;
+  left: 10vw;
+  top: 1vh;
+}
+
+.nav_icon {
+  position: relative;
+  max-width: 25vh;
+  max-height: 25vh;
+  top: -3vh;
+  left: -7vw;
+  margin-right: 0.5rem;
+}
+
+.nav_menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+.nav_item{
+  height: 80px;
+
+}
+
+.nav_item_links {
+  color: white;
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.nav_item_links:hover {
+  background-color: #707070;
+  transition: all 0.3s ease;
+}
+
+.main_content {
+  background-color: gray;
+}
+
+.main_content h3 {
+  margin-left: -80px;
+  justify-content: center;
+  align-items: center;
+  display:block;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.details {
+  color:black;
+  font-size: 1rem;
+}
+
+.standard_portrait {
+  color: white;
+}
+
+.group {
+  color: white;
+}
+
+.disclaimer {
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3vw;
+  color: white;
+}
+
+.location {
+  margin-left: 2.5vw;
+}
+
+.contact {
+  margin-left: 2.5vw;
+}
+
+.furtherinfo {
+  margin-left: 2.5vw;
+}
+
+/* mobile responsiveness so when it hits 960px call the objects */
+@media screen and (max-width: 960px) {
+  .nav_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0;
+  }
+
+  /* the menu when you hit the hamburger */
+  /* hidden by default then hamburger hit and js brings it down */
+  .nav_menu {
+    background-image: url("images/flare-gradient.jpg");
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px; /*so never seen until hamburger clicked */
+    opacity: 0;
+    transition: all 0.4 ease;
+    height: 50vh; /*viewport height */
+    z-index: -1 ;  /*to be able to click on the icon to show it*/
+  }
+
+  /* for when you click the hamburger */
+  .nav_menu.active {  
+    top: 100%; /*so show the entire active menu */
+    opacity: 1;
+    transition: all 0.4s ease;
+    z-index: 99;
+    height: 50vh;
+    font-size: 1.6rem;
+  }
+
+  .nav_txt {
+    padding-left: 25px;
+  }
+
+  .nav_icon {
+    max-height: 20vh;
+    max-width: 20vw;
+    left: -2vw;
+    top: -3.5vh;
+  }
+
+  /* so the hamburger */
+  .nav_toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.4s ease-in-out;
+    background-color: white;
+  }
+
+  .nav_item {
+    width: 100%;
+  }
+
+  .nav_links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+
+  /* adds the hamburger */
+  .nav_toggle .bar {
+    display: block;
+    cursor: pointer;
+  }
+
+
+  /* is-active is javascript and targets the second child */
+  /* these do the slight animation of the hamburger */
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* about me hamburger */
+  #about-mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #about-mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #about-mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* booking hamburger */
+  #booking-mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #booking-mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #booking-mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .bar {
+    margin-right: .5vw;
+  }
+}
+
+/* body section */
+.main {
+  background-color: gray
+}
+
+.main_container {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-self: center;
+  margin: 0 auto;
+  background-color: gray;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0px 50px;
+}
+
+.main_content h1 {
+  font-size: 4rem;
+  background-color: white;
+  background-image: linear-gradient(to top, #ffbbbb 0%, #ffb100 100%);
+  background-size: 100%;
+  -webkit-background-clip: text; /*moves the background to fill only the text*/
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -mox-text-fill-color: transparent;
+}
+
+.main_content h2 {
+  font-weight:bolder;
+  -webkit-background-clip: text; /*moves the background to fill only the text*/
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -mox-text-fill-color: transparent;
+  background-image: linear-gradient(to top, #ffbbbb 0%, #ffb100 100%);
+  
+}
+
+.main_content p {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.main_btn {
+  font-size: 1rem;
+  background-image: linear-gradient(to top, #ffbbbb 0%, #ffb100 100%);
+  padding: 14px 32px;
+  border: none;
+  color:white;
+  border-radius: 8px; /* makes roudned corners */
+  margin-top: 2rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.7s;
+  outline: none;
+  bottom: 1.8vh;
+}
+
+.main_btn a {
+  text-decoration: none;
+  font-size: 1.5;
+  font-weight: bolder;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+/*fills the button after you hover */
+.main_btn:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(247, 204, 66);
+  transition: all 0.6s;
+  border-radius: 8px;
+}
+
+.main_btn:hover {
+  color: gray;
+}
+
+/* tell it to fill the transition the entire button */
+.main_btn:hover:after {
+  width: 100%;
+}
+
+.main_img_container {
+  text-align: center;
+  width: 60vw;
+}
+
+#main_img {
+  position: relative;
+  top:-30vh;
+  left: 5vw;
+  height: 90%;
+  width: 90%;
+}
+
+
+/* footer */
+.footer {
+  max-height: 25vh;
+  background-image: url("images/flare-gradient.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instalogo {
+  max-width: 4vw;
+  max-height: 4vh;
+}
+
+.logo {
+  max-width: 15vw;
+  max-height: 15vh;
+  align-items:center;
+  left: -30vw;
+  margin-left: -60vw;
+}
+
+.copyright {
+  font-size: 1rem;
+  margin-top: 1vh;
+}
+
+.footer_items {
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_title_container {
+  position: absolute;
+  left: 73vw;
+}
+
+.std_plus {
+  color: white;
+}
+
+.footer_title {
+  font-size: 3vh;
+}
+
+
+
+/* contact page */
+
+.contact_page_container {
+  background-image: url("images/contact_img.svg");
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: absolute;
+  background-repeat:round;
+}
+
+.contact_title {
+  color: black;
+  font-weight: bolder;
+}
+
+.form_entry {
+  width: 70vw;
+  background: rgba(0,0,0,.4);
+  outline: none;
+  border: none;
+  border-bottom: 5px dotted orange;
+  font-size: 1.2rem;
+  color: orange;
+  font-weight: bold;
+  caret-color: orange;
+}
+
+::placeholder {
+  color: rgba(224, 171, 100, 0.932);
+}
+
+
+
+
+/* sent message text */
+.sent_message {
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
+  max-width: 80vw;
+  max-height: 80vh;
+}
+
+.sent_img_container {
+  justify-content: center;
+  align-items: center;
+  margin-left: 35vw;  
+}
+
+.sent_pic {
+  max-width: 30vw;
+}
+
+#booking_button {
+  margin-left: 40vw;
+}
+
+/* mobile responsvieness */
+@media screen and (max-width: 768px) {
+  
+  .main_container {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120vh;
+  }
+
+  .main_content {
+    text-align: center;
+    background-color: pink;
+    margin-bottom: 1rem;
+    margin-top: -7%;
+    background-color: gray;
+  }
+
+  .main_content h1 {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .main_content h2 {
+    font-size: rem;
+  }
+
+  .main_content h3 {
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    margin: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .main_content p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+  #main_img {
+    left: 20vw;
+    max-width: 50vw;
+    top: -4vh;
+    bottom: 8vh;
+  }
+
+  .main_btn {
+    bottom: 5vh;
+  }
+
+  .nav_icon {
+    max-width: 20vw;
+    max-height: 20vh;
+    left: -4vw;
+  }
+
+  .bar {
+    margin-right: .5vw;
+  }
+
+  .footer_title {
+    font-size: 99%;
+  }
+
+  .sent_img_container {
+    margin-top: 5vh;
+  }
+
+  #booking_button {
+    margin-left: 10vw;
+  }
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .main_content {
+    margin-top: -12%;
+  }
+  .main_content h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+
+  .main_content h2 {
+    font-size: 2rem;
+  }
+
+  .main_content p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .main_btn {
+    padding: 12px 36px;
+    margin: 2.5rem 0;
+  }
+
+  #main_img {
+    max-width: 280vw;
+    max-height: 290vh;
+    align-items: center;
+    justify-content: center;
+    left: 10vw;
+    background-size: cover;
+    margin-top: 10vh;
+  }
+
+  .nav_icon {
+    top: 1vh;
+    max-width: 25vw;
+  }
+
+  .nav_txt {
+    margin-top: 2vh;
+    margin-left: 2vw;
+  }
+
+  .main_btn {
+    margin-bottom: 0;
+  }
+
+  .bar {
+    margin-right: 1vw;
+    align-items: center;
+    justify-content: center;
+    padding: none;
+  }
+
+  .logo {
+    max-width: 35vw;
+    max-height: 15vh;
+    min-width: 35vw;
+    min-height: 10vh;
+  }
+
+  .logo_container {
+    position: relative;
+    left: -15vw;
+  }
+
+  .footer_title {
+    font-size: 70%;
+  }
+
+  .sent_img_container {
+    margin-left: 22vw;
+    margin-top: 25vh;
+  }
+
+  .sent_pic {
+    max-width: 55vw;
+  }
+
+  #booking_button {
+    margin-left: 10vw;
+  }
+}
+
+/* for mobile responsiveness and not just small window */
+@media screen and (max-width: 375px) {
+  .sent_img_container {
+    margin-left: 22vw;
+    margin-top:-1vh;
+  }
+
+  #main_img {
+    position: relative;
+    margin-top: 100vh;
+    margin-left: 15vw;
+  }
+
+  .main_img_container {
+    position: absolute;
+  }
+
+  #booking_button {
+    margin-left: 5vw;
+    margin-top: 6vh;
+  }
+
+  .contact_page_container {
+    max-height: 90vh;
+    margin-top: 5vh;
+  }
+}
+
+
+
+
+
