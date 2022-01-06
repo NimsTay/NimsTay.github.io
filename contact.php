@@ -24,14 +24,15 @@ if(isset($_POST['Submit']))
     $mail->isSMTP();
     $mail->Mailer = "smtp";
     $mail->Host = 'smtp.gmail.com';
-    $mail->SMTPAuth = "true";               // Enable SMTP authentication 
+    $mail->SMTPAuth = true;               // Enable SMTP authentication 
     $mail->Username = 'nimstayp@gmail.com';   // SMTP username 
     $mail->Password = 'nimstaypHOST22!';   // SMTP password 
     $mail->SMTPSecure = 'tls';            // Enable TLS encryption, `ssl` also accepted 
-    $mail->Port = '587';
+    $mail->Port = 587;
 
     $mail->setFrom("nimstayp@gmail.com", "NimsTay Photos");
     $mail->addAddress($mailto);
+    $mail->addReplyTo("nimstayp@gmail.com");
     $mail->isHTML(true);
     $mail->Subject = "aalksndkladn";
     $mail->Body = "dsjnfljkadsn f";
@@ -46,3 +47,5 @@ if(isset($_POST['Submit']))
     }
     $mail->smtpClose();
 }
+
+?>
