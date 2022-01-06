@@ -29,12 +29,14 @@ if(isset($_POST['Submit']))
     $mail->Port = 587;
     $mail->SMTPSecure = 'tls';            // Enable TLS encryption, `ssl` also accepted 
     $mail->Mailer = "smtp";
+    $mail->From = "nimstayphotos@yahoo.com";
 
-    $mail->isHTML(true);
     $mail->setFrom($email, $name);
-    $mail->addAddress($mailto);
-    $mail->Subject = ("$email ($subject)");
-    $mail->Body = $message;
+    $mail->addAddress("nimstayphotos@yahoo.com");
+    $mail->addReplyTo($email, $name);
+    $mail->isHTML(true);
+    $mail->Subject = $subject;
+    $mail->Body = '<h1 align=center>Name:'.$name.'<br>Email: '.$email.'<br>Message: '.$message.'</h1>';
     if(!$mail->Send()) 
     {
         echo "Error while sending Email.";
