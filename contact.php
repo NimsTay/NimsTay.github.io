@@ -1,3 +1,8 @@
+<html>
+<body>
+
+Welcome <?php echo 'hello' ?><br>
+
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -8,8 +13,8 @@ require 'includes/SMTP.php';
 
 
 // $mailto = "nimstayphotos@yahoo.com";
-   
- 
+
+
 // $mail = new PHPMailer(true);
 // $mail->isSMTP();
 // $mail->Host = 'smtp.gmail.com';
@@ -27,16 +32,15 @@ require 'includes/SMTP.php';
 // $mail->Body = 'hiiiii';
 // $mail->Send();
 
-print 'echo working';
 
 if(isset($_POST['Name']))
 {
-
+    
     $name = $_POST['Name'];
     $email = $_POST['Email'];
     $subject = $_POST['Subject'];
     $message = $_POST['Message'];
-   
+    
     $mail = new PHPMailer(true);
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
@@ -46,7 +50,7 @@ if(isset($_POST['Name']))
     $mail->Port = 587;
     $mail->SMTPSecure = 'tls';            // Enable TLS encryption, `ssl` also accepted 
     $mail->Mailer = "smtp";
-
+    
     $mail->setFrom($email, $name);
     $mail->addAddress("nimstayphotos@yahoo.com");
     $mail->isHTML(true);
@@ -56,3 +60,5 @@ if(isset($_POST['Name']))
 }
 
 ?>
+</body>
+</html>
