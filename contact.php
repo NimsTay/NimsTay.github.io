@@ -24,7 +24,7 @@ if(isset($_POST['Submit']))
     $mail->SMTPAuth = true;               // Enable SMTP authentication 
     $mail->Username = 'nimstayp@gmail.com';   // SMTP username 
     $mail->Password = 'nimstaypHOST22!';   // SMTP password 
-    $mail->Port = 465;
+    $mail->Port = 587;
     $mail->SMTPSecure = 'ssl';            // Enable TLS encryption, `ssl` also accepted 
     $mail->Mailer = "smtp";
 
