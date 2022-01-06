@@ -135,16 +135,24 @@ body {
 .gallery_title {
   text-align: center;
   background-color: gray;
+
 }
 
 .gal_img{
-  width: 24%;
-  height: 24%;
+  width: 12%;
+  height: 12%;
   padding: 1vw;
+  filter:grayscale(100%);
+  transition: 1s;
+}
+
+.gal_img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.5);
 }
 
 .gallery {
-  margin-left: 3vw;
+  margin-left: 2vw;
 }
 
 
