@@ -1,65 +1,45 @@
 <?php
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-require 'includes/Exception.php';
-require 'includes/PHPMailer.php';
-require 'includes/SMTP.php';
-
-
-// $mailto = "nimstayphotos@yahoo.com";
-
-
-// $mail = new PHPMailer(true);
-// $mail->isSMTP();
-// $mail->Host = 'smtp.gmail.com';
-// $mail->SMTPAuth = true;               // Enable SMTP authentication 
-// $mail->Username = 'nimstayp@gmail.com';   // SMTP username 
-// $mail->Password = 'nimstaypHOST22!';   // SMTP password 
-// $mail->Port = 587;
-// $mail->SMTPSecure = 'tls';            // Enable TLS encryption, `ssl` also accepted 
-// $mail->Mailer = "smtp";
-
-// $mail->setFrom('nimatay22@gmail.com');
-// $mail->addAddress("nimstayphotos@yahoo.com");
-// $mail->isHTML(true);
-// $mail->Subject = 'hello';
-// $mail->Body = 'hiiiii';
-// $mail->Send();
-
-
-if(isset($_POST['Name']))
-{
-    
-    $name = $_POST['Name'];
-    $email = $_POST['Email'];
-    $subject = $_POST['Subject'];
-    $message = $_POST['Message'];
-    
-    $mail = new PHPMailer();
-    $mail->isSMTP();
-    $mail->SMTPDebug = 1;
-    $mail->Host = 'smtp.gmail.com';
-    $mail->SMTPAuth = TRUE;               // Enable SMTP authentication 
-    $mail->Username = 'nimstayp@gmail.com';   // SMTP username 
-    $mail->Password = 'nimstaypHOST22!';   // SMTP password 
-    $mail->Port = 587;
-    $mail->SMTPSecure = 'tls';            // Enable TLS encryption, `ssl` also accepted 
-    $mail->Mailer = "smtp";
-    
-    $mail->setFrom('nimstayp@gmail.com', $name);
-    $mail->addAddress("nimstayphotos@yahoo.com", 'nima');
-    $mail->isHTML(true);
-    $mail->Subject = 'sadad';
-    $mail->Body = 'sdfadas';
-    $content = '<b>hello test </b>';
-    $mail->msgHTML($content);
-    if(!$mail->Send()) {
-        echo "Error while sending Email.";
-        var_dump($mail);
-      } else {
-        echo "Email sent successfully";
-      }
-}
-
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/cam.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      id="header-font"
+      href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="robots" content="index, follow" />
+</head>
+
+<body>
+    <div class="contact_page_container">
+        <h1 class="contact_title">Contact Page</h1>
+        <div class="contact_boxes">
+            <form class="contact_form" method="post" action="contact.php">
+                <?php include ("contact.php"); ?> 
+                <input id="Name" type="text" class="form_entry" placeholder="Your Name" required>
+                <br> <!-- line break -->
+                <input name="Email" type="email" class="form_entry" placeholder="youremail@domain.com" required>
+                <br>
+                <input name="Subject" type="text" class="form_entry" placeholder="Subject" required>
+                <br>
+                <textarea name="Message" class="form_entry" placeholder="Your Message" rows="4" required></textarea>
+                <br>
+                <button name="Submit" class="main_btn">
+                    <a href="">Send Message</a>
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- ERROR 404. please do not provide any sensititive information until i respond to this message -->
