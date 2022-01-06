@@ -1,9 +1,7 @@
 <?php
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
-
 
 
 if(isset($_POST['Submit']))
@@ -29,7 +27,6 @@ if(isset($_POST['Submit']))
     $mail->Port = 587;
     $mail->SMTPSecure = 'tls';            // Enable TLS encryption, `ssl` also accepted 
     $mail->Mailer = "smtp";
-    $mail->From = "nimstayphotos@yahoo.com";
 
     $mail->setFrom($email, $name);
     $mail->addAddress("nimstayp@gmail.com");
