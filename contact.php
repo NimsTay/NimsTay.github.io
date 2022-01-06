@@ -18,7 +18,7 @@ if(isset($_POST['Submit']))
     $mailto = "nimstayphotos@yahoo.com";
    
  
-    $mail = new PHPMailer();
+    $mail = new PHPMailer(true);
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;               // Enable SMTP authentication 
