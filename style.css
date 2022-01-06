@@ -131,6 +131,23 @@ body {
   margin-left: 1vw;
 }
 
+/* gallery */
+.gallery_title {
+  text-align: center;
+  background-color: gray;
+}
+
+.gal_img{
+  width: 24%;
+  height: 24%;
+  padding: 1vw;
+}
+
+.gallery {
+  margin-left: 3vw;
+}
+
+
 /* mobile responsiveness so when it hits 960px call the objects */
 @media screen and (max-width: 960px) {
   .nav_container {
@@ -265,7 +282,7 @@ body {
   #contact-mobile-menu.is-active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-
+  
   #port-mobile-menu.is-active .bar:nth-child(2) {
     opacity: 0;
   }
@@ -687,8 +704,6 @@ body {
     margin-top: 5vh;
   }
 }
-
-
 
 
 
