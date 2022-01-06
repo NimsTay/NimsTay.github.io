@@ -115,20 +115,20 @@ body {
   font-size: 1rem;
   justify-content: center;
   align-items: center;
-  margin-left: 3vw;
   color: white;
+  margin-left: 1vw;
 }
 
 .location {
-  margin-left: 2.5vw;
+  margin-left: 1vw;
 }
 
 .contact {
-  margin-left: 2.5vw;
+  margin-left: 1vw;
 }
 
 .furtherinfo {
-  margin-left: 2.5vw;
+  margin-left: 1vw;
 }
 
 /* mobile responsiveness so when it hits 960px call the objects */
@@ -165,7 +165,7 @@ body {
     opacity: 1;
     transition: all 0.4s ease;
     z-index: 99;
-    height: 50vh;
+    height: 52vh;
     font-size: 1.6rem;
   }
 
@@ -254,6 +254,30 @@ body {
     transform: translateY(-8px) rotate(-45deg);
   }
 
+  #contact-mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #contact-mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #contact-mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  #port-mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #port-mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #port-mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
   .bar {
     margin-right: .5vw;
   }
@@ -265,7 +289,6 @@ body {
 }
 
 .main_container {
-  position: absolute;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;

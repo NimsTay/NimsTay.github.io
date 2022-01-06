@@ -17,12 +17,51 @@
 </head>
 
 <body>
+    <!-- nav bar -->
+    <nav class="navbar">
+        <div class="nav_container">
+          <div class="nav_logo_container">
+            <a href="index.html" class="nav_txt"> NimsTay Photos</a>
+            <img src="images/logos.png" alt="" class="nav_icon" />
+          </div>
+          <div class="nav_toggle" id="contact-mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="nav_menu">
+            <li class="nav_item">
+              <a target="_self" class="nav_item_links" href="index.html">Home</a>
+            </li>
+            <li class="nav_item">
+              <a target="_self" class="nav_item_links" href="booking.html"
+                >Booking</a>
+            </li>
+            <li class="nav_item">
+              <a target="_self" class="nav_item_links" href="portfolio.html"
+                >Examples</a>
+            </li>
+            <li class="nav_item">
+              <a target="_self" class="nav_item_links" href="about.html"
+                >About Me</a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+    </nav>
+      
     <div class="contact_page_container">
         <h1 class="contact_title">Contact Page</h1>
         <div class="contact_boxes">
-            <form class="contact_form" method="post" action="contact.php">
-                <?php include ("contact.php"); ?> 
-                <input id="Name" type="text" class="form_entry" placeholder="Your Namell" required>
+            <form class="contact_form" method="post" action="index.php">
+                <input id="Name" type="text" class="form_entry" placeholder="Your Names" required>
                 <br> <!-- line break -->
                 <input name="Email" type="email" class="form_entry" placeholder="youremail@domain.com" required>
                 <br>
@@ -36,6 +75,7 @@
             </form>
         </div>
     </div>
+    <script src="app4.js"></script>
 </body>
 </html>
 
