@@ -54,7 +54,12 @@ if(isset($_POST['Name']))
     $mail->Body = 'sdfadas';
     $content = '<b>hello test </b>';
     $mail->msgHTML($content);
-    $mail->send();
+    if(!$mail->Send()) {
+        echo "Error while sending Email.";
+        var_dump($mail);
+      } else {
+        echo "Email sent successfully";
+      }
 }
 
 ?>
