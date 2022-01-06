@@ -20,7 +20,7 @@ if(isset($_POST['Submit']))
     $headers = "From:".$email;
     $txt = "You have received a message from ".$name.".\n\n".$message;
  
-    echo($message);
+    print($message);
     $mail = new PHPMailer(true);
     $mail->isSMTP();
     $mail->Mailer = "smtp";
