@@ -50,16 +50,7 @@ if(isset($_POST['Submit']))
     $mail->isHTML(true);
     $mail->Subject = $subject;
     $mail->Body = '<h1 align=center>Name:'.$name.'<br>Email: '.$email.'<br>Message: '.$message.'</h1>';
-    if(!$mail->Send()) 
-    {
-        echo "Error while sending Email.";
-        var_dump($mail);
-    } 
-    else 
-    {
-        echo "Email sent successfully";
-    }
-    $mail->smtpClose();
+    $mail->send();
 }
 
 ?>
