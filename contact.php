@@ -27,6 +27,8 @@ require 'includes/SMTP.php';
 // $mail->Body = 'hiiiii';
 // $mail->Send();
 
+echo 'echo working';
+
 if(isset($_POST['Submit']))
 {
 
