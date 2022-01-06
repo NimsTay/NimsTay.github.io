@@ -20,7 +20,6 @@ if(isset($_POST['Submit']))
     $headers = "From:".$email;
     $txt = "You have received a message from ".$name.".\n\n".$message;
  
-    print($message);
     $mail = new PHPMailer(true);
     $mail->isSMTP();
     $mail->Mailer = "smtp";
@@ -34,8 +33,8 @@ if(isset($_POST['Submit']))
     $mail->setFrom("nimstayp@gmail.com", "NimsTay Photos");
     $mail->addAddress($mailto);
     $mail->isHTML(true);
-    $mail->Subject = $subject;
-    $mail->Body = $txt;
+    $mail->Subject = "aalksndkladn";
+    $mail->Body = "dsjnfljkadsn f";
     if(!$mail->Send()) 
     {
         echo "Error while sending Email.";
