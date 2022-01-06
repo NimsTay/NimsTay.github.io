@@ -1,9 +1,11 @@
 <html>
 <body>
-
-Welcome <?php echo 'hello' ?><br>
+    Welcome <?php echo 'hello' ?><br>
+</body>
+</html>
 
 <?php
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
@@ -60,5 +62,3 @@ if(isset($_POST['Name']))
 }
 
 ?>
-</body>
-</html>
