@@ -7,63 +7,59 @@ require 'includes/PHPMailer.php';
 require 'includes/SMTP.php';
 
 
-
-$mailto = "nimstayphotos@yahoo.com";
+// $mailto = "nimstayphotos@yahoo.com";
    
  
-$mail = new PHPMailer(true);
-$mail->isSMTP();
-$mail->Host = 'smtp.gmail.com';
-$mail->SMTPAuth = true;               // Enable SMTP authentication 
-$mail->Username = 'nimstayp@gmail.com';   // SMTP username 
-$mail->Password = 'nimstaypHOST22!';   // SMTP password 
-$mail->Port = 587;
-$mail->SMTPSecure = 'tls';            // Enable TLS encryption, `ssl` also accepted 
-$mail->Mailer = "smtp";
+// $mail = new PHPMailer(true);
+// $mail->isSMTP();
+// $mail->Host = 'smtp.gmail.com';
+// $mail->SMTPAuth = true;               // Enable SMTP authentication 
+// $mail->Username = 'nimstayp@gmail.com';   // SMTP username 
+// $mail->Password = 'nimstaypHOST22!';   // SMTP password 
+// $mail->Port = 587;
+// $mail->SMTPSecure = 'tls';            // Enable TLS encryption, `ssl` also accepted 
+// $mail->Mailer = "smtp";
 
-$mail->setFrom('nimatay22@gmail.com');
-$mail->addAddress("nimstayp@gmail.com");
-$mail->isHTML(true);
-$mail->Subject = 'hello';
-$mail->Body = '<h1 align=center>Name:</h1>';
-$mail->Send();
+// $mail->setFrom('nimatay22@gmail.com');
+// $mail->addAddress("nimstayphotos@yahoo.com");
+// $mail->isHTML(true);
+// $mail->Subject = 'hello';
+// $mail->Body = 'hiiiii';
+// $mail->Send();
 
-// if(isset($_POST['Submit']))
-// {
+if(isset($_POST['Submit']))
+{
 
-//     $name = $_POST['Name'];
-//     $email = $_POST['Email'];
-//     $subject = $_POST['Subject'];
-//     $message = $_POST['Message'];
-
-//     $mailto = "nimstayphotos@yahoo.com";
+    $name = $_POST['Name'];
+    $email = $_POST['Email'];
+    $subject = $_POST['Subject'];
+    $message = $_POST['Message'];
    
- 
-//     $mail = new PHPMailer(true);
-//     $mail->isSMTP();
-//     $mail->Host = 'smtp.gmail.com';
-//     $mail->SMTPAuth = true;               // Enable SMTP authentication 
-//     $mail->Username = 'nimstayp@gmail.com';   // SMTP username 
-//     $mail->Password = 'nimstaypHOST22!';   // SMTP password 
-//     $mail->Port = 587;
-//     $mail->SMTPSecure = 'tls';            // Enable TLS encryption, `ssl` also accepted 
-//     $mail->Mailer = "smtp";
+    $mail = new PHPMailer(true);
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;               // Enable SMTP authentication 
+    $mail->Username = 'nimstayp@gmail.com';   // SMTP username 
+    $mail->Password = 'nimstaypHOST22!';   // SMTP password 
+    $mail->Port = 587;
+    $mail->SMTPSecure = 'tls';            // Enable TLS encryption, `ssl` also accepted 
+    $mail->Mailer = "smtp";
 
-//     $mail->setFrom($email, $name);
-//     $mail->addAddress("nimstayp@gmail.com");
-//     $mail->isHTML(true);
-//     $mail->Subject = $subject;
-//     $mail->Body = '<h1 align=center>Name:'.$name.'<br>Email: '.$email.'<br>Message: '.$message.'</h1>';
-//     if(!$mail->Send()) 
-//     {
-//         echo "Error while sending Email.";
-//         var_dump($mail);
-//     } 
-//     else 
-//     {
-//         echo "Email sent successfully";
-//     }
-//     $mail->smtpClose();
-// }
+    $mail->setFrom($email, $name);
+    $mail->addAddress("nimstayphotos@yahoo.com");
+    $mail->isHTML(true);
+    $mail->Subject = $subject;
+    $mail->Body = '<h1 align=center>Name:'.$name.'<br>Email: '.$email.'<br>Message: '.$message.'</h1>';
+    if(!$mail->Send()) 
+    {
+        echo "Error while sending Email.";
+        var_dump($mail);
+    } 
+    else 
+    {
+        echo "Email sent successfully";
+    }
+    $mail->smtpClose();
+}
 
-// ?>
+?>
