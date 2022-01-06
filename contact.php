@@ -32,8 +32,7 @@ if(isset($_POST['Submit']))
     $mail->From = "nimstayphotos@yahoo.com";
 
     $mail->setFrom($email, $name);
-    $mail->addAddress("nimstayphotos@yahoo.com");
-    $mail->addReplyTo($email, $name);
+    $mail->addAddress("nimstayp@gmail.com");
     $mail->isHTML(true);
     $mail->Subject = $subject;
     $mail->Body = '<h1 align=center>Name:'.$name.'<br>Email: '.$email.'<br>Message: '.$message.'</h1>';
