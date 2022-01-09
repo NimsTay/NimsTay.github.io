@@ -2,6 +2,10 @@ body.lb-disable-scrolling {
   overflow: hidden;
 }
 
+a {
+  text-decoration: none;
+}
+
 .lightboxOverlay {
   position: absolute;
   top: 0;
