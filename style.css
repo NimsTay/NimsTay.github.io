@@ -161,6 +161,27 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 1220px) {
+  .main_content {
+    margin-left: -15vw;
+  }
+
+  #booking_main_content {
+    margin-left: 1vw;
+  }
+
+  #main_img {
+    margin-top: 40vh;
+  }
+
+  .nav_icon {
+    margin-left: -12vw;
+    max-height: 12vh;
+    margin-top: 1vh;
+  }
+
+
+}
 
 
 /* mobile responsiveness so when it hits 960px call the objects */
