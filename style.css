@@ -306,6 +306,11 @@ body {
   .bar {
     margin-right: .5vw;
   }
+
+  .gal_img {
+    width: 16%;
+  }
+
 }
 
 /* body section */
@@ -597,6 +602,13 @@ body {
     margin-left: 10vw;
   }
 
+  .gal_img {
+    width: 24%;
+  }
+
+  .gallery {
+    margin-left: 1vw;
+  }
 }
 
 
@@ -683,6 +695,14 @@ body {
   #booking_button {
     margin-left: 10vw;
   }
+
+  .gal_img {
+    width: 30%;
+  }
+
+  .gallery {
+    margin-left: 5vw;
+  }
 }
 
 /* for mobile responsiveness and not just small window */
@@ -710,6 +730,14 @@ body {
   .contact_page_container {
     max-height: 90vh;
     margin-top: 5vh;
+  }
+
+  .gal_img {
+    width: 45%;
+  }
+
+  .gallery {
+    margin-left: 1vw;
   }
 }
 
