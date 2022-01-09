@@ -135,13 +135,13 @@ body {
 .gallery_title {
   text-align: center;
   background-color: gray;
-
+  font-weight: lighter;
 }
 
 .gal_img{
   width: 12%;
   height: 12%;
-  padding: 1vw;
+  padding: 1vw; 
   filter:grayscale(100%);
   transition: 1s;
 }
@@ -154,6 +154,13 @@ body {
 .gallery {
   margin-left: 2vw;
 }
+
+.gallery_rules {
+  font-size: 1.5vw;
+  justify-content: center;
+  text-align: center;
+}
+
 
 
 /* mobile responsiveness so when it hits 960px call the objects */
@@ -309,6 +316,12 @@ body {
 
   .gal_img {
     width: 16%;
+  }
+
+  .gallery_rules {
+    font-size: 1.8vw;
+    justify-content: center;
+    text-align: center;
   }
 
 }
@@ -609,6 +622,12 @@ body {
   .gallery {
     margin-left: 1vw;
   }
+
+  .gallery_rules {
+    font-size: 2.5vw;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 
@@ -703,6 +722,12 @@ body {
   .gallery {
     margin-left: 5vw;
   }
+
+  .gallery_rules {
+    font-size: 3.5vw;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 /* for mobile responsiveness and not just small window */
@@ -737,7 +762,13 @@ body {
   }
 
   .gallery {
-    margin-left: 1vw;
+    margin-left: 8vw;
+  }
+
+  .gallery_rules {
+    font-size: 3.5vw;
+    justify-content: center;
+    text-align: center;
   }
 }
 
