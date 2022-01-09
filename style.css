@@ -160,7 +160,7 @@ body {
   justify-content: center;
   text-align: center;
 }
-
+/* 
 @media screen and (max-width: 1220px) {
   .main_content {
     margin-left: -15vw;
@@ -181,7 +181,7 @@ body {
   }
 
 
-}
+} */
 
 
 /* mobile responsiveness so when it hits 960px call the objects */
@@ -751,20 +751,25 @@ body {
 }
 
 /* for mobile responsiveness and not just small window */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 380px) {
 
   .main_container {
-    margin-top: -10vh;
+    margin-top: -20vh;
+    margin-left: 7vw;
   }
   .sent_img_container {
     margin-left: 22vw;
     margin-top:-1vh;
   }
 
+  .nav_logo_container {
+    margin-left: 10vw;
+  }
+
   #main_img {
     position: relative;
-    margin-top: 95vh;
-    margin-left: -15vw;
+    margin-top: 88vh;
+    margin-left: -35vw;
   }
 
   .main_img_container {
