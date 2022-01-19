@@ -23,10 +23,10 @@ body {
 .nav_container {
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 100px;
   z-index: 1;
-  width: 100%;
-  max-width: 1300px;
+  width: 100vw;
+  max-width: 100vw;
   margin: 0 auto;
   padding: 0 50px;
 }
@@ -90,12 +90,10 @@ body {
 }
 
 .main_content h3 {
-  margin-left: -80px;
-  justify-content: center;
-  align-items: center;
   display:block;
   font-size: 1.5rem;
-  margin: 0.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .details {
@@ -166,7 +164,7 @@ body {
 @media screen and (max-width: 1920px) {
 
   #index_main{ /*for the index page */
-    margin-left: -5vw;
+    margin-left: -10vw;
   }
 
   #booking_main_content {
@@ -181,12 +179,28 @@ body {
     margin-left: 7vw;
   }
 
-  .nav_icon {
-    margin-left: -2vw;
-    max-width: 10vw;
-    margin-top: 1vh;
+  .nav_logo_container {
+    max-width: 20vw;
   }
 
+  .nav_icon {
+    position: absolute;
+    left:0;
+    max-width: 10vw;
+    max-height: 15vh;
+    margin-top: 2vh;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  #index_main {
+    left: 0;
+    margin-left: -2vw;
+  }
+
+  .main_img_container {
+    max-width: 55vw;
+  }
 }
 
 @media screen and (max-width: 1225px) {
@@ -202,10 +216,15 @@ body {
     margin-top: 40vh;
   }
 
+  .main_img_container {
+    max-width: 45vw;
+  }
+
   .nav_icon {
-    margin-left: 2vw;
-    max-height: 25vh;
-    margin-top: 1vh;
+    max-height: 15vh;
+    margin-top: 2vh;
+    max-width: 20vw;
+    margin-left: -1vw;
   }
 
 }
@@ -239,7 +258,8 @@ body {
   }
 
   .main_img_container {
-    max-width: 50vw;
+    max-width: 35vw;
+    margin-left: -5vw;
   }
   /* for when you click the hamburger */
   .nav_menu.active {  
@@ -257,8 +277,8 @@ body {
 
   .nav_icon {
     max-height: 20vh;
-    max-width: 20vw;
-    margin-left: 5vw;
+    max-width: 16vw;
+    margin-left: -1vw;
     margin-top: 1vh;
   }
 
@@ -597,7 +617,7 @@ body {
 }
 
 /* mobile responsvieness */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
   
   .main_container {
     display: grid;
@@ -639,10 +659,10 @@ body {
     font-size: 1.5rem;
   }
 
-  #main_img {
-    max-width: 40vw;
-    margin-left: 16vw;
-    margin-top: 23vh;
+  .main_img_container {
+    max-width: 50vw;
+    margin-left: 10vw;
+    margin-top: -15vh;
   }
 
   .main_btn {
@@ -653,7 +673,7 @@ body {
   .nav_icon {
     max-width: 20vw;
     max-height: 20vh;
-    margin-left: 5vw;
+    margin-left: -2vw;
     margin-top: 1vh;
   }
 
@@ -696,7 +716,7 @@ body {
 
 @media screen and (max-width: 660px) {
   .nav_icon {
-    margin-left: 5vw;
+    margin-left: -2vw;
   }
 
   .logo {
@@ -704,43 +724,47 @@ body {
   }
 
   .main_img_container{
-    max-width: 37vw;
-    margin-left: 2vw;
+    max-width: 60vw;
+    margin-left: 5vw;
   }
 }
 
 @media screen and (max-width: 520px) {
-  .main_img_container {
-    max-width: 28vw;
-    margin-top: -1vh;
-    margin-left: 5vw;
-  }
 
   .nav_icon {
     margin-top: 3vh;
-    margin-left: 5vw;
+    margin-left: -1vw;
+  }
+
+  .logo {
+    max-width: 30vw;
+    min-height: 20vh;
+    position: relative;
+    left:-10vw;
+  }
+
+  .main_img_container {
+    margin-left: 11vw;
   }
 
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 485px) {
 
   .main_content {
     margin-top: -12%;
     margin-left: 0.5vw;
   }
   .main_content h1 {
-    font-size: 2rem;
-    margin-top: 3rem;
+    margin-top: 10vh;
   }
 
   .main_content h2 {
-    font-size: 2rem;
+    font-size: 5vw;
   }
 
   .main_content p {
     margin-top: 1rem;
-    font-size: 1.5rem;
   }
 
   .main_btn {
@@ -749,17 +773,15 @@ body {
   }
 
   .main_img_container {
-    max-width: 15vw;
-    max-height: 10vh;
-    margin-top: -1vh;
-    margin-left: 5vw;
+    max-width: 70vw;
+    margin-left: 1vw;
   }
 
 
   .nav_icon {
     max-width: 25vw;
-    margin-left: 1vw;
-    margin-top: 3vh;
+    margin-left: -3vw;
+    margin-top: 2vh;
   }
 
   .nav_txt {
@@ -780,9 +802,8 @@ body {
 
   .logo {
     max-width: 30vw;
-    max-height: 20vh;
     min-width: 30vw;
-    min-height: 20vh;
+    min-height: 10vh;
     margin-left: -70vw;
   }
 
