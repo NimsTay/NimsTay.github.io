@@ -136,6 +136,7 @@ body {
   text-align: center;
   background-color: gray;
   font-weight: lighter;
+  color: white;
 }
 
 .gal_img{
@@ -159,12 +160,13 @@ body {
   font-size: 1.5vw;
   justify-content: center;
   text-align: center;
+  color: white;
 }
 
 
 @media screen and (max-width: 1220px) {
   .main_content {
-    margin-left: -15vw;
+    margin-left: 0.2vw;
   }
 
   #booking_main_content {
@@ -176,9 +178,9 @@ body {
   }
 
   .nav_icon {
-    margin-left: -12vw;
-    max-height: 12vh;
-    margin-top: 1vh;
+    margin-left: 2vw;
+    max-height: 25vh;
+    margin-top: 2vh;
   }
 
 }
@@ -202,16 +204,18 @@ body {
     background-image: url("images/flare-gradient.jpg");
     display: grid;
     grid-template-columns: auto;
-    margin: 0;
     width: 100%;
     position: absolute;
-    top: -1000px; /*so never seen until hamburger clicked */
+    top: -1250px; /*so never seen until hamburger clicked */
     opacity: 0;
     transition: all 0.4 ease;
     height: 50vh; /*viewport height */
     z-index: -1 ;  /*to be able to click on the icon to show it*/
   }
 
+  .main_img_container {
+    max-width: 50vw;
+  }
   /* for when you click the hamburger */
   .nav_menu.active {  
     top: 100%; /*so show the entire active menu */
@@ -229,8 +233,8 @@ body {
   .nav_icon {
     max-height: 20vh;
     max-width: 20vw;
-    left: -2vw;
-    top: -3.5vh;
+    margin-left: 5vw;
+    margin-top: 1vh;
   }
 
   /* so the hamburger */
@@ -345,6 +349,12 @@ body {
     text-align: center;
   }
 
+  .logo {
+    min-width: 20vw;
+    max-width: 20vw;
+    min-height: 20vh;
+    max-height: 20vh;
+  }
 }
 
 /* body section */
@@ -579,6 +589,7 @@ body {
     margin-bottom: 1rem;
     margin-top: -7%;
     background-color: gray;
+    margin-left: 1vw;
   }
 
   .main_content h1 {
@@ -604,20 +615,21 @@ body {
   }
 
   #main_img {
-    left: 20vw;
-    max-width: 50vw;
-    top: -4vh;
-    bottom: 8vh;
+    max-width: 40vw;
+    margin-left: 16vw;
+    margin-top: 23vh;
   }
 
   .main_btn {
     bottom: 5vh;
+    position: relative;
   }
 
   .nav_icon {
     max-width: 20vw;
     max-height: 20vh;
-    left: -4vw;
+    margin-left: 5vw;
+    margin-top: 1vh;
   }
 
   .bar {
@@ -649,13 +661,48 @@ body {
     justify-content: center;
     text-align: center;
   }
+
+  .logo {
+    min-width: 25vw;
+    min-height: 20vh;
+    margin-left: -65vw;
+  }
 }
 
+@media screen and (max-width: 660px) {
+  .nav_icon {
+    margin-left: 5vw;
+  }
+
+  .logo {
+    margin-left: -65vw;
+  }
+
+  .main_img_container{
+    max-width: 37vw;
+    margin-left: 2vw;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .main_img_container {
+    max-width: 28vw;
+    margin-top: -1vh;
+    margin-left: 5vw;
+  }
+
+  .nav_icon {
+    margin-top: 3vh;
+    margin-left: 5vw;
+  }
+
+}
 
 @media screen and (max-width: 480px) {
 
   .main_content {
     margin-top: -12%;
+    margin-left: 0.5vw;
   }
   .main_content h1 {
     font-size: 2rem;
@@ -673,21 +720,18 @@ body {
 
   .main_btn {
     padding: 12px 36px;
-    margin: 2.5rem 0;
+    
   }
 
   #main_img {
-    max-width: 280vw;
-    max-height: 290vh;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    margin-left: -20vw;
+    width: 20vh;
+    margin-top: 22vh;
   }
 
   .nav_icon {
-    top: 1vh;
     max-width: 25vw;
+    margin-left: 1vw;
+    margin-top: 3vh;
   }
 
   .nav_txt {
@@ -707,15 +751,10 @@ body {
   }
 
   .logo {
-    max-width: 35vw;
-    max-height: 15vh;
-    min-width: 35vw;
-    min-height: 10vh;
-  }
-
-  .logo_container {
-    position: relative;
-    left: -15vw;
+    max-width: 30vw;
+    max-height: 20vh;
+    min-width: 30vw;
+    min-height: 20vh;
   }
 
   .footer_title {
@@ -755,7 +794,7 @@ body {
 
   .main_container {
     margin-top: -20vh;
-    margin-left: 7vw;
+    margin-left: 9vw;
   }
   .sent_img_container {
     margin-left: 22vw;
@@ -768,7 +807,7 @@ body {
 
   #main_img {
     position: relative;
-    margin-top: 88vh;
+    margin-top: 8vh;
     margin-left: -35vw;
   }
 
