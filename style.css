@@ -163,6 +163,24 @@ body {
   color: white;
 }
 
+@media screen and (max-width: 1920px) {
+
+  .main_content {
+    margin-left: -5vw;
+  }
+
+  .main_img_container {
+    margin-top: 70vh;
+  }
+
+  .logo_container {
+    margin-left: 5vw;
+  }
+
+  .nav_icon {
+    margin-left: -3vw;
+  }
+}
 
 @media screen and (max-width: 1220px) {
   .main_content {
@@ -723,10 +741,13 @@ body {
     
   }
 
-  #main_img {
-    width: 20vh;
-    margin-top: 22vh;
+  .main_img_container {
+    max-width: 15vw;
+    max-height: 10vh;
+    margin-top: -1vh;
+    margin-left: 5vw;
   }
+
 
   .nav_icon {
     max-width: 25vw;
@@ -755,6 +776,7 @@ body {
     max-height: 20vh;
     min-width: 30vw;
     min-height: 20vh;
+    margin-left: -70vw;
   }
 
   .footer_title {
