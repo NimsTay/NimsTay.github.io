@@ -188,7 +188,7 @@ body {
     left:0;
     max-width: 10vw;
     max-height: 15vh;
-    margin-top: 2vh;
+    margin-top: 1vh;
   }
 }
 
@@ -843,8 +843,8 @@ body {
 @media screen and (max-width: 380px) {
 
   .main_container {
-    margin-top: -20vh;
-    margin-left: 9vw;
+    margin-top: -5vh;
+    margin-left: 3vw;
   }
   .sent_img_container {
     margin-left: 22vw;
@@ -855,15 +855,19 @@ body {
     margin-left: 10vw;
   }
 
-  #main_img {
-    position: relative;
-    margin-top: 8vh;
-    margin-left: -35vw;
+  .main_img_container {
+    max-width: 80vw;
+    min-width: 80vw;
+    max-height: 30vh;
+    margin-top: -50vh;
+    margin-left: -7vw;
   }
 
-  .main_img_container {
-    position: absolute;
+  .main_btn {
+    margin-top: 8vh;
   }
+
+
 
   #booking_button {
     margin-left: 5vw;
