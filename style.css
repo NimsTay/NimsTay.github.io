@@ -205,11 +205,11 @@ body {
     display: grid;
     grid-template-columns: auto;
     width: 100%;
-    position: absolute;
-    top: -1250px; /*so never seen until hamburger clicked */
+    position: absolute; 
+    top: -1000px; /*so never seen until hamburger clicked */
     opacity: 0;
     transition: all 0.4 ease;
-    height: 50vh; /*viewport height */
+    height: 100vh; 
     z-index: -1 ;  /*to be able to click on the icon to show it*/
   }
 
@@ -222,7 +222,7 @@ body {
     opacity: 1;
     transition: all 0.4s ease;
     z-index: 99;
-    height: 52vh;
+    height: 62vh;
     font-size: 1.6rem;
   }
 
