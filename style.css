@@ -165,7 +165,7 @@ body {
 
 @media screen and (max-width: 1920px) {
 
-  .main_content {
+  .main_container .main_content{ /*for the index page */
     margin-left: -5vw;
   }
 
@@ -178,11 +178,12 @@ body {
   }
 
   .nav_icon {
-    margin-left: -3vw;
+    margin-left: -2vw;
   }
+
 }
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1225px) {
   .main_content {
     margin-left: 0.2vw;
   }
@@ -198,7 +199,7 @@ body {
   .nav_icon {
     margin-left: 2vw;
     max-height: 25vh;
-    margin-top: 2vh;
+    margin-top: 1vh;
   }
 
 }
